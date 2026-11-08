@@ -1,0 +1,13 @@
+# Grok Bot: approved Mac commands for iPhone Control. Approve these forms only.
+# Replace /ABSOLUTE/PATH with the install location. <ID> values come from earlier JSON output.
+# Do not approve `iphonectl doctor`, shell wrappers, pipes or any other command.
+/ABSOLUTE/PATH/iphone-control/.venv/bin/iphonectl status
+/ABSOLUTE/PATH/iphone-control/.venv/bin/iphonectl observe
+/ABSOLUTE/PATH/iphone-control/.venv/bin/iphonectl observe --inline
+/ABSOLUTE/PATH/iphone-control/.venv/bin/iphonectl observe --text
+/ABSOLUTE/PATH/iphone-control/.venv/bin/iphonectl tap --session <ID> --observation <ID> --request <NEW-ID> --x <X> --y <Y>
+/ABSOLUTE/PATH/iphone-control/.venv/bin/iphonectl type --session <ID> --observation <ID> --request <NEW-ID> --text <TEXT>
+/ABSOLUTE/PATH/iphone-control/.venv/bin/iphonectl key --session <ID> --observation <ID> --request <NEW-ID> --name <KEY>
+/ABSOLUTE/PATH/iphone-control/.venv/bin/iphonectl scroll --session <ID> --observation <ID> --request <NEW-ID> --direction <up|down> [--distance <short|medium>]
+/ABSOLUTE/PATH/iphone-control/.venv/bin/iphonectl batch --session <ID> --observation <ID> --request <NEW-ID> --steps <JSON> [--text]
+/ABSOLUTE/PATH/iphone-control/.venv/bin/iphonectl release [--session <ID>]

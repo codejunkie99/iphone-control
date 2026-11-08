@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+# never commit runtime state or screen content
+*.png
+*.log
+*.sock
+docs/TEST-RESULTS.md

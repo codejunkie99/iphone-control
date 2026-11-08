@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iphone-control"
+version = "0.1.0"
+description = "Bounded, owner-approved control of your own iPhone through iPhone Mirroring, for MCP clients and a CLI."
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+dependencies = [
+  "pyobjc-framework-Quartz>=10; sys_platform == 'darwin'",
+  "pyobjc-framework-Cocoa>=10; sys_platform == 'darwin'",
+  "pyobjc-framework-ApplicationServices>=10; sys_platform == 'darwin'",
+  "pyobjc-framework-Vision>=10; sys_platform == 'darwin'",
+]
+
+[project.scripts]
+iphonectl = "iphone_control.cli:main"
+iphone-control-mcp = "iphone_control.mcp_server:main"
+iphone-control-app = "iphone_control.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

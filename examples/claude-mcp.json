@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "iphone-control": {
+      "type": "stdio",
+      "command": "/ABSOLUTE/PATH/TO/iphone-control/.venv/bin/iphone-control-mcp",
+      "args": []
+    }
+  }
+}
